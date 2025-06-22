@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Troll</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }.calculator {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  padding: 20px;
+}
+
+.display {
+  font-size: 32px;
+  padding: 10px;
+  background: #222;
+  color: #0f0;
+  text-align: right;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  min-height: 40px;
+}
+
+.log {
+  font-size: 14px;
+  color: #555;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+.clear {
+  grid-column: span 4;
+  background: #f88;
+}
+
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="log" id="log">Oi. Sou a calculadora mais preguiçosa do planeta.</div>
+    <div class="buttons">
+      <button class="btn" onclick="press('7')">7</button>
+      <button class="btn" onclick="press('8')">8</button>
+      <button class="btn" onclick="press('9')">9</button>
+      <button class="btn" onclick="press('/')">/</button><button class="btn" onclick="press('4')">4</button>
+  <button class="btn" onclick="press('5')">5</button>
+  <button class="btn" onclick="press('6')">6</button>
+  <button class="btn" onclick="press('*')">*</button>
+
+  <button class="btn" onclick="press('1')">1</button>
+  <button class="btn" onclick="press('2')">2</button>
+  <button class="btn" onclick="press('3')">3</button>
+  <button class="btn" onclick="press('-')">-</button>
+
+  <button class="btn" onclick="press('0')">0</button>
+  <button class="btn" onclick="press('.')">.</button>
+  <button class="btn" onclick="calculate()">=</button>
+  <button class="btn" onclick="press('+')">+</button>
+
+  <button class="btn clear" onclick="clearDisplay()">C</button>
+</div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
